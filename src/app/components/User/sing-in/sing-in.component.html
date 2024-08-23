@@ -1,0 +1,31 @@
+
+<div id="form">
+    <div id="Signmail">
+        <h3>Sign In</h3>
+        <input type="email" id="mail" id="field" placeholder="email">
+        <div class="password-container">
+            <input [type]="fieldTextType ? 'text' : 'password'" placeholder="Contraseña" id="field">
+            <i
+            class="fa toggle-password"
+            [ngClass]="{
+              'fa-eye-slash': !fieldTextType,
+              'fa-eye': fieldTextType
+            }"
+            (click)="toggleFieldTextType()"
+          ></i>
+        </div>
+        <button id="loginbutton">Sign In</button>
+    </div>
+    <div id="SignWith">
+        <h3> Sign In With</h3>
+        <div id="choices">
+            <button id="choicesbutton">
+                <i class="fa-brands fa-google"></i>
+            </button>
+            <button id="choicesbutton">
+                <i class="fa-brands fa-windows"></i>
+            </button>
+        </div>
+    </div>
+
+</div>

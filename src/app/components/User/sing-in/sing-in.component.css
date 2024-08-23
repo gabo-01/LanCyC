@@ -1,0 +1,118 @@
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    margin: 50px auto;
+    width: 100%; 
+    
+    max-width: 400px;
+    max-height: 600px;
+    border: 1px solid #000; 
+    border-radius: 10%;  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); 
+
+}
+
+#Signmail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+   
+}
+
+#choices{
+    display: flex;
+   
+    justify-content: center;
+    gap: 15px; 
+    padding: 10px;
+
+}
+
+#choicesbutton{
+    display: inline-block;
+    
+   
+    padding: 10px 10px;
+    background-color: #05c492;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#choicesbutton:hover{
+    background-color: #00a078;
+  }
+
+  .fa-google,.fa-windows{
+    font-size: 1.5Rem;
+        color:#002f26;
+  }
+
+  #field {
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    margin: 10px;
+    border-radius: 5px;
+    padding: 8px; 
+    max-width: 300px; 
+    width: 100%;
+    background-color: #ebfef6;
+}
+#field::placeholder{
+    color: #5deebe;
+    text-align: left;
+}
+
+#field:focus::placeholder{
+    color: transparent;
+}
+
+#field:focus{
+    border: 1px solid #006550;
+background-color: transparent;
+
+
+}
+#loginbutton {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #05c492;
+    border: none;
+    border-radius: 15%;
+    color: #002f26;
+    padding: 5px ; 
+    width: 100%;
+    max-width: 120px;
+    font-size: 16px; 
+}
+
+#loginbutton:hover{
+    background-color: #00a078;
+    
+}
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    width: fit-content;
+   
+    box-sizing: border-box; /* Agregué box-sizing: border-box */
+  }
+
+  
+  .password-container .toggle-password {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color:  #05c492;
+  }
+
+  .password-container .toggle-password:hover {
+    color: #00a078; 
+  }
