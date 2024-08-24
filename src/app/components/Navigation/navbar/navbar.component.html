@@ -1,0 +1,21 @@
+<nav id="navbar">
+    <div id="search">
+      <input type="search" id="busqueda" placeholder="Buscar...">
+    </div>
+    <ul id="menu">
+      <li><a href="/Home" id="option">Home</a></li>
+      <li><a href="/about" id="option">About us</a></li>
+      <li class="dropdownMeu">
+        <button (click)="toggleMenu()" class="user">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-regular fa-user"></i>
+        </button>
+        <ul id="submenu" [class.show]="menuOpen">
+            <li><a href="/Login">Ingresar</a></li>
+          <li><a href="/SingIn">Registrar</a></li>
+       
+          <li><a href="/Home">Cerrar sesión</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
