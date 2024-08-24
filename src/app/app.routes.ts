@@ -22,6 +22,6 @@ export const routes: Routes = [
     redirectTo: 'Home',
     pathMatch: 'full'
 
-}
+},
 
 ];
