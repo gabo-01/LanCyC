@@ -129,3 +129,8 @@ a:hover{
   .password-container .toggle-password:hover {
     color: #00a078; 
   }
+
+  .error-message{
+    color: #fa2a2a;
+    font-size: 8px;
+  }
