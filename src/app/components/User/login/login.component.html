@@ -1,10 +1,17 @@
-
-<div id="group-form">
+<form id="group-form" [formGroup]="formulario">
     <div id="login">
         <h3> Ingresa</h3>
-        <input type="email" placeholder="e-mail" id="field">
+        <input type="email" placeholder="e-mail" id="field" formControlName="username">
+        <div *ngIf="formulario.get('username')?.invalid && (formulario.get('username')?.touched || formulario.get('username')?.dirty)">
+            <div *ngIf="formulario.get('username')?.errors?.['required']" class="error-message">
+                El correo electrónico es requerido
+            </div>
+            <div *ngIf="formulario.get('username')?.errors?.['email']" class="error-message">
+                El correo electrónico no es válido
+            </div>
+        </div>
         <div class="password-container">
-            <input [type]="fieldTextType ? 'text' : 'password'" placeholder="Contraseña" id="field">
+            <input [type]="fieldTextType ? 'text' : 'password'" placeholder="Contraseña" id="field" formControlName="password">
             <i
             class="fa toggle-password"
             [ngClass]="{
@@ -14,7 +21,16 @@
             (click)="toggleFieldTextType()"
           ></i>
         </div>
-        <button id="loginbutton">
+        <div *ngIf="formulario.get('password')?.invalid && (formulario.get('password')?.touched || formulario.get('password')?.dirty)">
+   
+            <div *ngIf="formulario.get('password')?.errors?.['required']" class="error-message">
+                La contraseña es requerida
+            </div>
+            <div *ngIf="formulario.get('password')?.errors?.['minlength']" class="error-message">
+                La contraseña debe tener al menos {{ formulario.get('password')?.errors?.['minlength'].requiredLength }} caracteres
+            </div>
+        </div>
+        <button id="loginbutton" [disabled]="formulario.invalid">
             Ingresar
         </button>
     </div>
@@ -35,5 +51,4 @@
         </h3>
         <a href="/SingIn">Registrar</a>
     </div>
-
-</div>
+</form>

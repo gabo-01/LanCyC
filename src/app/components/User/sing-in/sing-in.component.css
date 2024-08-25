@@ -1,4 +1,4 @@
-#form{
+#group-form{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
    
 }
 
@@ -115,4 +115,9 @@ background-color: transparent;
 
   .password-container .toggle-password:hover {
     color: #00a078; 
+  }
+
+  .error-message{
+    color: #fa2a2a;
+    font-size: 8px;
   }
